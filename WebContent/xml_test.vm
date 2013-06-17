@@ -1,0 +1,4 @@
+    The document tag1 is
+    $root.getChild('tag1').getText()
+<br/>
+

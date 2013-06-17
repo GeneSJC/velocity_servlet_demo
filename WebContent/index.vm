@@ -1,0 +1,32 @@
+<html>
+<head> <title>Hello Velocity</title> </head>
+<body>
+<h1>Hello World..!!</h1>
+#parse("variable_test.vm")
+
+<br />
+<br />
+
+#parse("xml_test.vm")
+
+<br />
+<br />
+$val1
+<table>
+<tr>
+    <td>Name</td>
+    <td>Address</td>
+<tr>
+## for each statement to iterate over a collection
+#foreach($user in $users)
+<tr>
+    <td>$user.name</td>
+    <td>$user.address</td>
+<tr>
+#end
+</table>
+
+## simple velocity method
+Today is :  $date.medium
+</body>
+</html>

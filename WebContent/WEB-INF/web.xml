@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>SimpleServlet</display-name>
+
+  <servlet>
+    <description></description>
+    <display-name>Hello</display-name>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>com.test.servlet.Hello</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/Hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>VelocityServlet</display-name>
+    <servlet-name>VelocityServlet</servlet-name>
+    <servlet-class>com.test.servlet.VelocityServlet</servlet-class>
+     <init-param>
+         <param-name>properties</param-name>
+         <param-value>/WEB-INF/velocity.properties</param-value>
+     </init-param>
+  	</servlet>
+  <servlet-mapping>
+    <servlet-name>VelocityServlet</servlet-name>
+    <url-pattern>/VelocityServlet</url-pattern>
+  </servlet-mapping>
+    
+  <!-- Define Velocity template compiler -->
+  <servlet>
+    <servlet-name>velocity</servlet-name>
+    <servlet-class>org.apache.velocity.tools.view.servlet.VelocityViewServlet</servlet-class>
+  </servlet>   
+
+  <!-- Map *.vm files to Velocity -->
+  <servlet-mapping>
+    <servlet-name>velocity</servlet-name>
+    <url-pattern>*.vm</url-pattern>
+  </servlet-mapping>
+    
+</web-app>

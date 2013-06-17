@@ -1,0 +1,16 @@
+
+
+## this is a comment, set variable name with "Edw" value
+#set( $name = "Edw" )
+
+<h2> $name is using velocity</h2>
+
+## if-else statement
+#if($name.equals("NotEdw"))
+    <br />
+    not an Edw
+#else
+    <br />
+	Else part of it
+#end
+  
